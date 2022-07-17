@@ -5,9 +5,36 @@
 	<title>erfan's epk</title>
 </head>
 <body>
-	<p id="">This website is under construction.</p>
-	<p>It won't be anything fancy but i haven't gotten the chance to work on it yet.</p>
-	<p>It should be serving its purpose by mid-late July, 2022</p>
-	<p>~erfan</p>
+	<!-- javascript code ripped and repurposed from http://jsfiddle.net/bubencode/dn6xc932/ -->
+	<script>
+		var seconds = 4; // seconds for HTML
+		var foo; // variable for clearInterval() function
+
+		function redirect() {
+		document.location.href = 'https://epk.onlyerfans.com/epk.pdf';
+		}
+
+		function updateSecs() {
+		document.getElementById("counter").innerHTML = "in " + seconds + " second(s)!";
+		seconds--;
+			if (seconds == -1) {
+				clearInterval(foo);
+				redirect();
+			}
+		}
+
+	function countdownTimer() {
+		foo = setInterval(function () {
+			updateSecs()
+		}, 1000);
+	}
+
+	countdownTimer();
+	</script>
+	
+	<h1>You should be redirected to my epk.pdf...<h1>
+	<p id="counter">in 5 second(s)!</p>
+	<p>if the script doesn't work for some reason, click/tap <a href="https://epk.onlyerfans.com/epk.pdf">here</a> instead</p>
+
 </body>
 </html>
